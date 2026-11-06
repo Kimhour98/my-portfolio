@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox 19 Examples</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #fff;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: 16px;
+            margin: 15px 0 8px;
+            font-weight: bold;
+        }
+
+        nav {
+            border: 0px solid #ddd;
+            min-height: 40px;
+            background: #fff;
+        }
+
+        nav a {
+            display: block;
+            padding: 7px 14px;
+            background: #eee;
+            color: #555;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 2px;
+            white-space: nowrap;
+        }
+
+        /* -------------------------
+           1. display:flex
+        ------------------------- */
+        .box1 {
+            display: flex;
+        }
+
+        /* -------------------------
+           2. justify-content:center
+        ------------------------- */
+        .box2 {
+            display: flex;
+            justify-content: center;
+        }
+
+        /* -------------------------
+           3. justify-content:flex-end
+        ------------------------- */
+        .box3 {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        /* -------------------------
+           4. space-around
+        ------------------------- */
+        .box4 {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        /* -------------------------
+           5. space-between
+        ------------------------- */
+        .box5 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* -------------------------
+           6. space-evenly
+        ------------------------- */
+        .box6 {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        /* -------------------------
+           7. align-items:flex-end
+        ------------------------- */
+        .box7 {
+            background: black;
+            height: 64px;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        /* -------------------------
+           8. align-items:center
+        ------------------------- */
+        .box8 {
+            background: black;
+            height: 64px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* -------------------------
+           9. gap
+        ------------------------- */
+        .box9 {
+            display: flex;
+            gap: 36px;
+        }
+
+        /* -------------------------
+           10. order:-1
+        ------------------------- */
+        .box10 {
+            display: flex;
+        }
+
+        .box10 a:nth-child(3) {
+            background: yellow;
+            order: -1;
+        }
+
+        /* -------------------------
+           11. order:1
+        ------------------------- */
+        .box11 {
+            display: flex;
+        }
+
+        .box11 a:nth-child(3) {
+            background: yellow;
+            order: 1;
+        }
+
+        /* -------------------------
+           12. flex-grow item 1
+        ------------------------- */
+        .box12 {
+            display: flex;
+        }
+
+        .box12 a:nth-child(1) {
+            flex-grow: 1;
+        }
+
+        /* -------------------------
+           13. flex-grow item 3
+        ------------------------- */
+        .box13 {
+            display: flex;
+        }
+
+        .box13 a:nth-child(3) {
+            flex-grow: 1;
+        }
+
+        /* -------------------------
+           14. flex-grow item 5
+        ------------------------- */
+        .box14 {
+            display: flex;
+        }
+
+        .box14 a:nth-child(5) {
+            flex-grow: 1;
+        }
+        /* -------------------------
+           15. flex-grow 1,2,3,4
+        ------------------------- */
+        .box15 {
+            display: flex;
+            text-align: center;
+        }
+
+        .box15 a:nth-child(2) {
+            flex-grow: 1;
+        }
+
+        .box15 a:nth-child(3) {
+            flex-grow: 2;
+        }
+
+        .box15 a:nth-child(4) {
+            flex-grow: 3;
+        }
+
+        .box15 a:nth-child(5) {
+            flex-grow: 4;
+        }
+
+        /* -------------------------
+           16. flex-shrink
+        ------------------------- */
+        .box16 {
+            display: flex;
+        }
+
+        .box16 a:nth-child(1) {
+            flex-shrink: 1;
+        }
+
+        .box16 a:nth-child(2),
+        .box16 a:nth-child(3),
+        .box16 a:nth-child(4),
+        .box16 a:nth-child(5) {
+            flex-shrink: 0;
+        }
+
+        /* -------------------------
+           17. row-reverse
+        ------------------------- */
+        .box17 {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        /* -------------------------
+           18. column
+        ------------------------- */
+        .box18 {
+            width: 120px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* -------------------------
+           19. column-reverse
+        ------------------------- */
+        .box19 {
+            width: 120px;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>ដាក់​ display: flex; អោយធាតុ nav នោះវាក្លាយជា flex container ៕​ រីធាតុ​ a ​ជាកូននៃធាតុ​ nav ធាតុ​ a </h1>
+
+    <!-- 1 -->
+    <h2>1. display:flex;</h2>
+    <nav class="box1">
+        <a href="#">flex item 1</a>
+        <a href="#">flex item 2</a>
+        <a href="#">flex item 3</a>
+        <a href="#">flex item 4</a>
+        <a href="#">flex item 5</a>
+    </nav>
+
+
+    <!-- 2 -->
+    <h2>2. display:flex; justify-content:center;</h2>
+    <nav class="box2">
+        <a href="#">flex item 1</a>
+        <a href="#">flex item 2</a>
+        <a href="#">flex item 3</a>
+        <a href="#">flex item 4</a>
+        <a href="#">flex item 5</a>
+    </nav>
+
+
+    <!-- 3 -->
+    <h2>3. display:flex; justify-content:flex-end</h2>
+    <nav class="box3">
+        <a href="#">flex item 1</a>
+        <a href="#">flex item 2</a>
+        <a href="#">flex item 3</a>
+        <a href="#">flex item 4</a>
+        <a href="#">flex item 5</a>
+    </nav>
+
+
+    <!-- 4 -->
+    <h2>4. display:flex; justify-content:space-around</h2>
+    <nav class="box4">
+        <a href="#">flex item 1</a>
+        <a href="#">flex item 2</a>
+        <a href="#">flex item 3</a>
+        <a href="#">flex item 4</a>
+        <a href="#">flex item 5</a>
+    </nav>
+
+
+    <!-- 5 -->
+    <h2>5. display:flex; justify-content:space-between</h2>
+    <nav class="box5">
+        <a href="#">flex item 1</a>
+        <a href="#">flex item 2</a>
+        <a href="#">flex item 3</a>
+        <a href="#">flex item 4</a>
+        <a href="#">flex item 5</a>
+    </nav>
+
+
+    <!-- 6 -->
+    <h2>6. display:flex; justify-content:space-evenly</h2>
+    <nav class="box6">
+        <a href="#">flex item 1</a>
+        <a href="#">flex item 2</a>
+        <a href="#">flex item 3</a>
+        <a href="#">flex item 4</a>
+        <a href="#">flex item 5</a>
+    </nav>
+
+
+    <!-- 7 -->
+    <h2>7. display:flex; align-items:flex-end</h2>
+    <nav class="box7">
+        <a href="#">flex item 1</a>
+        <a href="#">flex item 2</a>
+        <a href="#">flex item 3</a>
+        <a href="#">flex item 4</a>
+        <a href="#">flex item 5</a>
+    </nav>
+
+
+    <!-- 8 -->
+    <h2>8. display:flex; align-items:center</h2>
+    <nav class="box8">
+        <a href="#">flex item 1</a>
+        <a href="#">flex item 2</a>
+        <a href="#">flex item 3</a>
+        <a href="#">flex item 4</a>
+        <a href="#">flex item 5</a>
+    </nav>
+    <!-- 9 -->
+    <h2>9. display:flex; gap:36px;</h2>
+    <nav class="box9">
+        <a href="#">flex item 1</a>
+        <a href="#">flex item 2</a>
+        <a href="#">flex item 3</a>
+        <a href="#">flex item 4</a>
+        <a href="#">flex item 5</a>
+    </nav>
+
+
+    <!-- 10 -->
+    <h2>10. display:flex; flex item 3 → order:-1</h2>
+    <nav class="box10">
+        <a href="#">flex item 1</a>
+        <a href="#">flex item 2</a>
+        <a href="#">flex item 3</a>
+        <a href="#">flex item 4</a>
+        <a href="#">flex item 5</a>
+    </nav>
+
+
+    <!-- 11 -->
+    <h2>11. display:flex; flex item 3 → order:1</h2>
+    <nav class="box11">
+        <a href="#">flex item 1</a>
+        <a href="#">flex item 2</a>
+        <a href="#">flex item 3</a>
+        <a href="#">flex item 4</a>
+        <a href="#">flex item 5</a>
+    </nav>
+
+
+    <!-- 12 -->
+    <h2>12. display:flex; flex item 1 → flex-grow:1</h2>
+    <nav class="box12">
+        <a href="#">flex item 1</a>
+        <a href="#">flex item 2</a>
+        <a href="#">flex item 3</a>
+        <a href="#">flex item 4</a>
+        <a href="#">flex item 5</a>
+    </nav>
+
+
+    <!-- 13 -->
+    <h2>13. display:flex; flex item 3 → flex-grow:1</h2>
+    <nav class="box13">
+        <a href="#">flex item 1</a>
+        <a href="#">flex item 2</a>
+        <a href="#">flex item 3</a>
+        <a href="#">flex item 4</a>
+        <a href="#">flex item 5</a>
+    </nav>
+
+
+    <!-- 14 -->
+    <h2>14. display:flex; flex item 5 → flex-grow:1</h2>
+    <nav class="box14">
+        <a href="#">flex item 1</a>
+        <a href="#">flex item 2</a>
+        <a href="#">flex item 3</a>
+        <a href="#">flex item 4</a>
+        <a href="#">flex item 5</a>
+    </nav>
+
+
+    <!-- 15 -->
+    <h2>15. display:flex; flex item 2-5 → flex-grow</h2>
+    <nav class="box15">
+        <a href="#">flex item 1</a>
+        <a href="#">flex item 2</a>
+        <a href="#">flex item 3</a>
+        <a href="#">flex item 4</a>
+        <a href="#">flex item 5</a>
+    </nav>
+
+
+    <!-- 16 -->
+    <h2>
+        16. display:flex; flex item 1 → flex-shrink:1
+        and flex item 2-5 → flex-shrink:0
+    </h2>
+
+    <nav class="box16">
+        <a href="#">flex item 1</a>
+        <a href="#">flex item 2</a>
+        <a href="#">flex item 3</a>
+        <a href="#">flex item 4</a>
+        <a href="#">flex item 5</a>
+    </nav>
+
+
+    <!-- 17 -->
+    <h2>17. display:flex; flex-direction: row-reverse;</h2>
+    <nav class="box17">
+        <a href="#">flex item 1</a>
+        <a href="#">flex item 2</a>
+        <a href="#">flex item 3</a>
+        <a href="#">flex item 4</a>
+        <a href="#">flex item 5</a>
+    </nav>
+
+
+    <!-- 18 -->
+    <h2>18. display:flex; flex-direction: column;</h2>
+    <nav class="box18">
+        <a href="#">flex item 1</a>
+        <a href="#">flex item 2</a>
+        <a href="#">flex item 3</a>
+        <a href="#">flex item 4</a>
+        <a href="#">flex item 5</a>
+    </nav>
+
+
+    <!-- 19 -->
+    <h2>19. display:flex; flex-direction: column-reverse;</h2>
+    <nav class="box19">
+        <a href="#">flex item 1</a>
+        <a href="#">flex item 2</a>
+        <a href="#">flex item 3</a>
+        <a href="#">flex item 4</a>
+        <a href="#">flex item 5</a>
+    </nav>
+
+</body>
+</html>
