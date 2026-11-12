@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JS Basic Four</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fdf6c3;
+            color: #333;
+            min-height: 100vh;
+            margin: 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            transition: 0.4s;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 500px;
+            padding: 25px;
+            background: white;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 30px;
+            margin: 5px 0 20px;
+        }
+
+        #weatherImg {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 12px;
+            display: block;
+            margin: 10px auto;
+        }
+
+        #title {
+            font-size: 26px;
+            margin: 15px 0;
+        }
+
+        #switchBtn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 14px 25px;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #switchBtn:hover {
+            background: #2980b9;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Weather Switch</h1>
+
+        <!-- Weather Image -->
+        <img id="weatherImg"
+     src="../multimedia/image/sunny.jpg"
+     alt="Weather Image">
+
+<h2 id="title">Sunny Day ☀️</h2>
+
+<button id="switchBtn">
+    Switch to Rainy Mode
+</button>
+
+    </div>
+
+    <script>
+
+const switchBtn = document.getElementById("switchBtn");
+const weatherImg = document.getElementById("weatherImg");
+const title = document.getElementById("title");
+
+let isSunny = true;
+
+switchBtn.addEventListener("click", function () {
+
+    // កំណត់រូបភាពថ្មី
+    const newImage = isSunny
+        ? "../multimedia/image/rainy.jpg"
+        : "../multimedia/image/sunny.jpg";
+
+    // ពិនិត្យរូបភាព
+    const testImage = new Image();
+
+    testImage.onload = function () {
+
+        weatherImg.src = newImage;
+
+        if (isSunny) {
+
+            title.textContent = "Rainy Day 🌧️";
+
+            document.body.style.background = "#9ecafc";
+            document.body.style.color = "#0b1d3a";
+
+            switchBtn.textContent = "Switch to Sunny Mode";
+            switchBtn.style.background = "#0066cc";
+
+        } else {
+
+            title.textContent = "Sunny Day ☀️";
+
+            document.body.style.background = "#fdf6c3";
+            document.body.style.color = "#333";
+
+            switchBtn.textContent = "Switch to Rainy Mode";
+            switchBtn.style.background = "#3498db";
+
+        }
+
+        isSunny = !isSunny;
+    };
+
+    testImage.onerror = function () {
+        alert("រករូបភាពមិនឃើញ! សូមពិនិត្យឈ្មោះ rainy.jpg និងទីតាំង Folder។");
+    };
+
+    testImage.src = newImage;
+
+});
+
+
+       
+
+
+
+    </script>
+
+</body>
+</html>

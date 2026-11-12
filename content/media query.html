@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Advanced CSS Concepts — @media</title>
+
+    <style>
+        body {
+            background-color: #FFFFFF;
+        }
+
+        /* Extra large devices - Desktop */
+        @media (min-width: 1200px) {
+            body {
+                background-color: #EEEEEE;
+            }
+        }
+
+        /* Large devices - Laptop or desktop */
+        @media (max-width: 1199px) and (min-width: 992px) {
+            body {
+                background-color: #CCCCCC;
+            }
+        }
+
+        /* Medium devices - Tablet landscape */
+        @media (max-width: 991px) and (min-width: 768px) {
+            body {
+                background-color: #999999;
+            }
+        }
+
+        /* Small devices - Tablet portrait */
+        @media (max-width: 767px) and (min-width: 576px) {
+            body {
+                background-color: #666666;
+            }
+        }
+
+        /* Extra small devices - Mobile phone */
+        @media (max-width: 575px) {
+            body {
+                background-color: #333333;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+</html>

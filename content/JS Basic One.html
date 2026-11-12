@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basic One</title>
+</head>
+
+<body>
+
+    <h3>1. Inline Script</h3>
+
+    <input
+        type="button"
+        onclick="alert('សួស្តី! នេះជា JavaScript Alert!');"
+        value="ចុចទីនេះ">
+
+    <hr>
+
+    <h3>2. Internal Script</h3>
+
+    <p id="is">...</p>
+
+    <script>
+        document.getElementById("is").innerText =
+            "ខ្ញុំសាកល្បង p តាមរយៈ internal script.";
+    </script>
+
+    <hr>
+
+    <h3>3. External Script</h3>
+
+    <p id="es">...</p>
+
+    <script src="./script/external.js"></script>
+
+</body>
+</html>

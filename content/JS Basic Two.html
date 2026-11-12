@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Basic Two</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        #dx1 {
+            padding: 40px;
+            font-size: 25px;
+            font-weight: bold;
+            border-radius: 10px;
+            margin: 30px auto;
+            width: 350px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>JavaScript Basic Two</h2>
+
+    <p id="dx1">JavaScript Dynamic Content</p>
+
+    <script>
+
+        // បង្កើត colors array
+        const colors = [
+            "greenyellow",
+            "yellow",
+            "red",
+            "white"
+        ];
+
+        // បង្កើត contents array
+        const contents = [
+            "សួស្តី",
+            "អរុណសួស្តី",
+            "រាត្រីសួស្តី"
+        ];
+
+        // បង្កើតអថេរ i
+        var i = 1;
+
+        // ប្រើ setInterval
+        setInterval(() => {
+
+            // ទាញយក Element
+            let dx1 = document.getElementById("dx1");
+
+            // ប្ដូរអត្ថបទ
+            dx1.textContent = contents[i];
+
+            // ប្ដូរ Background
+            dx1.style.backgroundColor = colors[i];
+
+            // ប្ដូរពណ៌អក្សរ
+            dx1.style.color = colors[++i];
+
+            // កំណត់ i
+            i = i % 2;
+
+        }, 1000);
+
+    </script>
+
+</body>
+</html>

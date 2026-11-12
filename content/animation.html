@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Fade Animation</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 30px;
+            background: #f5f5f5;
+        }
+
+        .circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 20px;
+        }
+
+        @keyframes fades {
+            0% {
+                opacity: 1;
+            }
+
+            25% {
+                opacity: 0.75;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+
+            75% {
+                opacity: 0.25;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .fade-circle {
+            animation-name: fades;
+            animation-duration: 4s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>CSS Fade Animation</h2>
+
+    <div class="circle fade-circle"
+         style="background-color: #D95F00;"></div>
+
+    <div class="circle fade-circle"
+         style="background-color: #1A2F45;"></div>
+
+    <div class="circle fade-circle"
+         style="background-color: #F0F0F0;"></div>
+
+</body>
+</html>

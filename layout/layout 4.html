@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Grid Layout</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 200px 1fr 250px;
+            grid-template-rows: 80px 1fr 60px;
+            gap: 10px;
+            min-height: 100vh;
+            padding: 10px;
+        }
+
+        .header {
+            grid-column: 1 / 4;
+            background: #3498db;
+        }
+
+        .sidebar {
+            background: #2ecc71;
+        }
+
+        .content {
+            background: #f1c40f;
+        }
+
+        .right {
+            background: #e67e22;
+        }
+
+        .footer {
+            grid-column: 1 / 4;
+            background: #34495e;
+        }
+
+        .item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            border-radius: 8px;
+        }
+        /* 3. កំណត់កម្ពស់អេក្រង់ */
+min-height: 100vh;
+
+/* 4. កំណត់ចន្លោះ */
+gap: 1rem;
+padding: 1rem;
+
+/* 5. កំណត់ Grid Areas */
+grid-template-areas:
+    "header header header"
+    "sidebar main ads"
+    "footer footer footer";
+
+/* 6. កំណត់ទីតាំង និងពណ៌ */
+.header {
+    grid-area: header;
+    background: #333333;
+    color: #FFFFFF;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: #EEEEEE;
+}
+
+.main {
+    grid-area: main;
+    background: #FFFFFF;
+}
+
+.ads {
+    grid-area: ads;
+    background: #959595;
+}
+
+.footer {
+    grid-area: footer;
+    background: #333333;
+    color: #FFFFFF;
+}
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header item">HEADER</div>
+        <div class="sidebar item">SIDEBAR</div>
+        <div class="content item">CONTENT</div>
+        <div class="right item">RIGHT</div>
+        <div class="footer item">FOOTER</div>
+    </div>
+
+</body>
+</html>

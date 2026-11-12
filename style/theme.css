@@ -1,0 +1,64 @@
+
+/* =========================
+   SILVER THEME
+========================= */
+.silver {
+    background-color: #c0c0c0;
+    color: #222;
+}
+
+/* =========================
+   ORANGE THEME
+========================= */
+.orange {
+    background-color: #ff9800;
+    color: #fff;
+}
+
+/* =========================
+   BLUE THEME
+========================= */
+.blue {
+    background-color: #001f3f;
+    color: #e0f7ff;
+}
+
+/* =========================
+   GENERAL STYLE
+========================= */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 30px;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.card {
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+.card p {
+    font-size: 16px;
+}
